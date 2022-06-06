@@ -28,7 +28,7 @@ cd axis-common-node-red
 ```
 Update containers
 ```
-docker-compose pull
+sudo docker-compose pull
 ```
 Install npm packages. 
 The following additional packages will be installed
@@ -46,12 +46,12 @@ npm install
 ```
 If nodejs and npm is not installed run
 ```
-docker-compose up -d
+sudo docker-compose up -d
 docker exec -it axis-common-node-red bash
 cd /data
 npm install
 exit
-docker-compose down
+sudo docker-compose down
 ```
 Optional edit docker-compose and settings.js (see above)
 ```
@@ -60,7 +60,7 @@ nano settings.js
 ```
 Start container
 ```
-docker-compose up -d
+sudo docker-compose up -d
 ```
 Access Node-RED with a browser
 ```
