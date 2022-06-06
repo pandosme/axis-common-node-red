@@ -12,3 +12,4 @@ package-lock.json
 .config.users.json.backup
 .flows.json.backup
 .flows_cred.json.backup
+.config.projects.json.backup
