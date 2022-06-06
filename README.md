@@ -30,7 +30,15 @@ Update containers
 ```
 docker-compose pull
 ```
-Install npm packages.  If nodejs and npm is installed on your system run
+Install npm packages. 
+The following additional packages will be installed
+- [Dashboard](https://flows.nodered.org/node/node-red-dashboard)
+- [UI Table](https://flows.nodered.org/node/node-red-node-ui-table)
+- [Axis device & Axis Camera](https://flows.nodered.org/node/node-red-contrib-axis-device)
+- [Axis ACAP](https://flows.nodered.org/node/node-red-contrib-axis-acap)
+- [Axis Security](https://flows.nodered.org/node/node-red-contrib-axis-security)
+
+If nodejs and npm is installed on your system run,
 ```
 npm install
 ```
