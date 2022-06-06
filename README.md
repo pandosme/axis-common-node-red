@@ -10,7 +10,7 @@ You may want to alter the following default settings
 ## docker-compose.yaml
 - Port = 8600
 - Timezone = Europe/Stockholm
-- container_name (if you paln to have multiple instance of Node-RED containers)
+- container_name (if you plan to have multiple instance of Node-RED containers)
 
 ## settings.js
 - httpAdminRoot: '/admin',   (Default flows view url http://address:8600/admin)
