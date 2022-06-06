@@ -48,7 +48,7 @@ npm install
 If nodejs and npm is not installed run
 ```
 sudo docker-compose up -d
-docker exec -it axis-common-node-red bash
+sudo docker exec -it axis-common-node-red bash
 cd /data
 npm install
 exit
