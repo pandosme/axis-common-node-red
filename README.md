@@ -24,7 +24,7 @@ You may want to alter the following default settings
 # Deployment
 Clone repository (e.g. from /home/user/ )
 ```
-git clone git@github.com:pandosme/axis-common-node-red.git
+git clone https://github.com/pandosme/axis-common-node-red.git
 cd axis-common-node-red
 ```
 Update containers
