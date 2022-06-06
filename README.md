@@ -44,7 +44,12 @@ npm install
 ```
 If nodejs and npm is not installed run
 ```
-TBD
+docker-compose up -d
+docker exec -it axis-common-node-red bash
+cd /data
+npm install
+exit
+docker-compose down
 ```
 Optional edit docker-compose and settings.js (see above)
 ```
