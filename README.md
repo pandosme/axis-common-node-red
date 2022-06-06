@@ -37,6 +37,8 @@ The following additional packages will be installed
 - [Axis device & Axis Camera](https://flows.nodered.org/node/node-red-contrib-axis-device)
 - [Axis ACAP](https://flows.nodered.org/node/node-red-contrib-axis-acap)
 - [Axis Security](https://flows.nodered.org/node/node-red-contrib-axis-security)
+- [MongoDB](https://flows.nodered.org/node/node-red-node-mongodb)
+- [InfluxDB](https://flows.nodered.org/node/node-red-contrib-influxdb)
 
 If nodejs and npm is installed on your system run,
 ```
