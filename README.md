@@ -68,3 +68,4 @@ Access Node-RED with a browser
 Flows http://address:8600/admin
 Dashboard http://address:8600
 ```
+When entering flows view and you don't plan using projects, just click "Not right now"
