@@ -39,6 +39,13 @@ npm install
 ```
 If nodejs and npm is not installed run
 ```
+sudo docker-compose up -d
+sudo docker exec -it axis-common-node-red bash
+cd /data
+npm install
+exit
+sudo docker-compose down
+```
 The following additional packages will be installed
 - [Dashboard](https://flows.nodered.org/node/node-red-dashboard)
 - [UI Table](https://flows.nodered.org/node/node-red-node-ui-table)
@@ -48,13 +55,8 @@ The following additional packages will be installed
 - [MongoDB](https://flows.nodered.org/node/node-red-node-mongodb)
 - [InfluxDB](https://flows.nodered.org/node/node-red-contrib-influxdb)
 
-sudo docker-compose up -d
-sudo docker exec -it axis-common-node-red bash
-cd /data
-npm install
-exit
-sudo docker-compose down
-```
+
+
 Optional edit docker-compose and settings.js (see above)
 ```
 nano docker-compose.yaml
