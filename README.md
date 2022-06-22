@@ -43,7 +43,7 @@ The following additional packages will be installed
 
 If nodejs and npm is installed on your system run,
 ```
-npm install
+sudo npm install
 ```
 If nodejs and npm is not installed run
 ```
