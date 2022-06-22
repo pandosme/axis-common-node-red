@@ -1,18 +1,17 @@
-# axis-common-node-red:mongo
-Common Node-RED configuration when scripting cameras with a local mongo database container.
+# axis-common-node-red: objectpaht
+Node-RED environment/configuration for objectpath-abalyzer.  The ObjectPath application needs to be cloned from the Node-RED projects.
 
 # pre-requisites
 - Linux host with Docker, Docker-compose and GIT installed
 
-# Node-RED Configuration
-You may want to alter the following default settings
-
-## docker-compose.yaml
-- Port = 8600
+# Container configuration
+You may want to alter the docker-compose default settings based on your environment
+- Port = 8640
 - Timezone = Europe/Stockholm
-- container_name (if you paln to have multiple instance of Node-RED containers)
+- objectpath-nodered (if you paln to have multiple instance)
 
-## settings.js
+# Node-RED configuration
+You may want to alter the default configuration of Node-RED based on your environment
 - httpAdminRoot: '/admin',   (Default flows view url http://address:8600/admin)
 - ui: { path: "/" },         (Default dashboard url http://address:8600/)
 - adminAuth:                 (Default disabled.  It is recommended that you enable admin credentials.  See [Securing Node-RED](https://nodered.org/docs/user-guide/runtime/securing-node-red#editor--admin-api-security))
@@ -22,24 +21,25 @@ You may want to alter the following default settings
 - credentialSecret           (Set your own key to encrypt sensative data on host)
 
 # Deployment
-Clone repository (e.g. from /home/user/ )
+### Clone repository (e.g. from /home/user/ )
 ```
 git clone https://github.com/pandosme/axis-common-node-red.git
 cd axis-common-node-red
 ```
-Update containers
+### Switch to OnbjectPath branch
+```
+git checkout objectpath
+```
+### Install node-red and mongo containers
 ```
 sudo docker-compose pull
 ```
-Install npm packages. 
+### Install npm packages. 
 The following additional packages will be installed
 - [Dashboard](https://flows.nodered.org/node/node-red-dashboard)
 - [UI Table](https://flows.nodered.org/node/node-red-node-ui-table)
 - [Axis device & Axis Camera](https://flows.nodered.org/node/node-red-contrib-axis-device)
-- [Axis ACAP](https://flows.nodered.org/node/node-red-contrib-axis-acap)
-- [Axis Security](https://flows.nodered.org/node/node-red-contrib-axis-security)
 - [MongoDB](https://flows.nodered.org/node/node-red-node-mongodb)
-- [InfluxDB](https://flows.nodered.org/node/node-red-contrib-influxdb)
 
 If nodejs and npm is installed on your system run,
 ```
@@ -54,18 +54,14 @@ npm install
 exit
 sudo docker-compose down
 ```
-Optional edit docker-compose and settings.js (see above)
-```
-nano docker-compose.yaml
-nano settings.js
-```
-Start container
+## Start container
 ```
 sudo docker-compose up -d
 ```
 Access Node-RED with a browser
 ```
-Flows http://address:8600/admin
-Dashboard http://address:8600
+Flows http://address:8640/admin
+Dashboard http://address:8640
 ```
-When entering flows view and you don't plan using projects, just click "Not right now"
+## Clone ObjectPath application
+Follow instructions on [objectpath-analyzer](https://github.com/pandosme/objectpath-analyzer)
