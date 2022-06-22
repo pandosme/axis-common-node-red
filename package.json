@@ -1,6 +1,6 @@
 {
-    "name": "axis-influx",
-    "description": "Template for Node-Red-Services using influx",
+    "name": "axis-syslog",
+    "description": "Syslog server for Axis cameras",
     "version": "1.0.0",
     "private": true,
     "dependencies": {
