@@ -64,4 +64,4 @@ Flows http://address:8640/admin
 Dashboard http://address:8640
 ```
 ## Clone ObjectPath application
-Follow instructions on [objectpath-analyzer](https://github.com/pandosme/objectpath-analyzer)
+The ObjectPath Analyzer application is in a different reposiroty and needs to be cloned inside Node-RED projects from [objectpath-analyzer](https://github.com/pandosme/objectpath-analyzer)
