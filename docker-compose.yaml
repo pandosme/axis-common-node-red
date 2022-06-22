@@ -1,12 +1,23 @@
 version: '3'
 services:
   nodered:
-    container_name: axis-common-node-red
+    container_name: axis-node-red
     image: nodered/node-red:latest
     restart: always
     environment:
       - TZ=Europe/Stockholm
     ports:
-      - '8600:1880'
+      - '8605:1880'
+    links:
+      - influxdb      
     volumes:
       - ./:/data
+  influxdb:
+    container_name: axis-influx
+    restart: always
+    image: influxdb:1.8.10
+    user: '0'
+    volumes:
+      - ./influxdb:/var/lib/influxdb
+#    ports:
+#      - '8086:8086'      
