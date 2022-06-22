@@ -1,4 +1,4 @@
-# axis-common-node-red: objectpaht
+# axis-common-node-red: objectpath
 Node-RED environment/configuration for objectpath-abalyzer.  The ObjectPath application needs to be cloned from the Node-RED projects.
 
 # pre-requisites
