@@ -4,9 +4,10 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-        "node-red-contrib-influxdb": "~0.6.1",
         "node-red-dashboard": "~3.1.7",
-        "node-red-contrib-syslog-input": "~1.0.1",        
-        "node-red-node-ui-table": "~0.3.12"
+        "node-red-node-ui-table": "~0.3.12",
+        "node-red-contrib-influxdb": "~0.6.1",
+        "node-red-contrib-axis-device": "~1.2.8",
+        "node-red-contrib-syslog-input": "~1.0.1"
     }
 }
