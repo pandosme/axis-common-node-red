@@ -1,19 +1,19 @@
 version: '3'
 services:
   nodered:
-    container_name: axis-common-node-red
+    container_name: objectpath-nodered
     image: nodered/node-red:latest
     restart: always
     environment:
       - TZ=Europe/Stockholm
     ports:
-      - '8600:1880'
+      - '8640:1880'
     links:
       - mongodb
     volumes:
       - ./:/data
   mongodb:
-    container_name: axis-common-node-red-mongo
+    container_name: objectpath-mongodb
     image: mongo:4.4.14
     restart: always
 #    ports:
@@ -21,18 +21,5 @@ services:
     environment:
      - MONGODB_AUTH=false
     volumes:
-      - mongo-data:/data/db
+      - ./mongodb:/data/db
 
-  mongo-express:
-    container_name: axis-common-node-red-mongo-express
-    image: mongo-express
-    restart: always
-    environment:
-      - ME_CONFIG_MONGODB_SERVER=mongodb
-    depends_on:
-      - mongodb
-    ports:
-      - 8681:8081
-
-volumes:
-  mongo-data:
