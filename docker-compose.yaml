@@ -16,23 +16,21 @@ services:
     container_name: axis-common-node-red-mongo
     image: mongo:4.4.14
     restart: always
+# Remove remarks below to expose mongodb port outside the container
 #    ports:
 #      - 27017:27017
     environment:
      - MONGODB_AUTH=false
     volumes:
-      - mongo-data:/data/db
+      - ./mongodb:/data/db
 
-  mongo-express:
-    container_name: axis-common-node-red-mongo-express
-    image: mongo-express
-    restart: always
-    environment:
-      - ME_CONFIG_MONGODB_SERVER=mongodb
-    depends_on:
-      - mongodb
-    ports:
-      - 8681:8081
-
-volumes:
-  mongo-data:
+#  mongo-express:
+#    container_name: axis-common-node-red-mongo-express
+#    image: mongo-express
+#    restart: always
+#    environment:
+#      - ME_CONFIG_MONGODB_SERVER=mongodb
+#    depends_on:
+#      - mongodb
+#    ports:
+#      - 8681:8081
