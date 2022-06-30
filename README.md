@@ -1,5 +1,5 @@
 # axis-common-node-red
-Common Node-RED configuration when scripting cameras
+Common Node-RED configuration when collecting data from cameras to be displayed in grafana.
 
 # pre-requisites
 - Linux host with Docker, Docker-compose and GIT installed
@@ -8,7 +8,8 @@ Common Node-RED configuration when scripting cameras
 You may want to alter the following default settings
 
 ## docker-compose.yaml
-- Port = 8600
+- Port 8606 (Node-RED)
+- Port 3000 (Grafana)
 - Timezone = Europe/Stockholm
 - container_name (if you plan to have multiple instance of Node-RED containers)
 
@@ -69,7 +70,8 @@ sudo docker-compose up -d
 ```
 Access Node-RED with a browser
 ```
-Flows http://address:8600/admin
-Dashboard http://address:8600
+Flows http://address:8606/admin
+Dashboard http://address:8606
+Grafana http://address:3000
 ```
 When entering flows view and you don't plan using projects, just click "Not right now"
