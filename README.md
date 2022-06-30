@@ -25,6 +25,7 @@ You may want to alter the default configuration of Node-RED based on your enviro
 ```
 git clone https://github.com/pandosme/axis-common-node-red.git
 cd axis-common-node-red
+git checkout objectpath
 ```
 ### Switch to OnbjectPath branch
 ```
