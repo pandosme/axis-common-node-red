@@ -8,7 +8,8 @@ Common Node-RED configuration when scripting cameras
 You may want to alter the following default settings
 
 ## docker-compose.yaml
-- Port = 8600
+- Port = 8600 (Node-RED)
+- Port = 20514 (Syslog )
 - Timezone = Europe/Stockholm
 - container_name (if you plan to have multiple instance of Node-RED containers)
 
