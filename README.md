@@ -26,6 +26,7 @@ Clone repository (e.g. from /home/user/ )
 ```
 git clone git@github.com:pandosme/axis-common-node-red.git
 cd axis-common-node-red
+git checkout influx
 ```
 Update containers
 ```
