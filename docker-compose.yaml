@@ -1,13 +1,13 @@
 version: '3'
 services:
   nodered:
-    container_name: axis-node-red
+    container_name: axis-node-red-grafana
     image: nodered/node-red:latest
     restart: always
     environment:
       - TZ=Europe/Stockholm
     ports:
-      - '8605:1880'
+      - '8606:1880'
     links:
       - influxdb      
     volumes:
@@ -21,3 +21,18 @@ services:
       - ./influxdb:/var/lib/influxdb
 #    ports:
 #      - '8086:8086'      
+
+  grafana:
+    image: grafana/grafana
+    container_name: device-graph-grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    user: "0"
+    environment:
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+    links:
+      - influxdb
+   
